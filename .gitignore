@@ -1,0 +1,34 @@
+# Rust / Cargo build artifacts
+/target
+**/*.rs.bk
+Cargo.lock
+
+# Downloaded files and APK packages
+/downloads
+*.apk
+*.apks
+*.xapk
+*.apkm
+*.idsig
+
+# User session credentials & tokens
+session.json
+*.session
+
+# Logs and debug files
+*.log
+.system_generated/
+
+# OS and Editor metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

@@ -1,0 +1,46 @@
+[package]
+name = "gplay-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["vichhka-git"]
+description = "Fast, standalone Google Play Store APK downloader & installer in Rust"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/vichhka-git/gplay-cli"
+homepage = "https://github.com/vichhka-git/gplay-cli"
+keywords = ["android", "apk", "google-play", "downloader", "adb"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "gplay-cli"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream", "gzip", "deflate"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.5", features = ["derive", "cargo"] }
+inquire = "0.7"
+indicatif = { version = "0.17", features = ["tokio"] }
+comfy-table = "7.1"
+colored = "2.1"
+zip = { version = "2.2", default-features = false, features = ["deflate"] }
+sha2 = "0.10"
+sha1 = "0.10"
+base64 = "0.22"
+directories = "5.0"
+anyhow = "1.0"
+thiserror = "1.0"
+tempfile = "3.10"
+regex = "1.10"
+futures-util = "0.3"
+rand = "0.8"
+urlencoding = "2.1"
+chrono = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
