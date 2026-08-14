@@ -2,7 +2,7 @@
 
 # gplay-cli
 
-[![Crates.io](https://img.shields.io/crates/v/gplay-cli.svg)](https://crates.io/crates/gplay-cli)
+[![Crates.io](https://img.shields.io/crates/v/gplay-cli.svg?logo=rust)](https://crates.io/crates/gplay-cli)
 [![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](https://github.com)
@@ -26,13 +26,35 @@ A fast, standalone command-line tool and interactive wizard written in Rust to *
 
 ## 🚀 Installation
 
-### Via Cargo (Recommended)
+### 1. Pre-built Binaries (No Rust Required)
+
+Download the ready-to-run binary for your platform from the [**GitHub Releases**](https://github.com/vichhka-git/gplay-cli/releases/latest) page:
+
+| Platform | Architecture | Binary Archive |
+| :--- | :--- | :--- |
+| 🍏 **macOS** | Apple Silicon (M1/M2/M3/M4) | [`gplay-cli-aarch64-apple-darwin.tar.gz`](https://github.com/vichhka-git/gplay-cli/releases/latest) |
+| 🍏 **macOS** | Intel (x86_64) | [`gplay-cli-x86_64-apple-darwin.tar.gz`](https://github.com/vichhka-git/gplay-cli/releases/latest) |
+| 🐧 **Linux** | x86_64 (musl static / glibc) | [`gplay-cli-x86_64-unknown-linux-musl.tar.gz`](https://github.com/vichhka-git/gplay-cli/releases/latest) |
+| 🐧 **Linux** | ARM64 / AArch64 | [`gplay-cli-aarch64-unknown-linux-musl.tar.gz`](https://github.com/vichhka-git/gplay-cli/releases/latest) |
+| 🪟 **Windows** | x86_64 (64-bit) | [`gplay-cli-x86_64-pc-windows-msvc.zip`](https://github.com/vichhka-git/gplay-cli/releases/latest) |
+
+```bash
+# Example for Linux/macOS:
+tar -xzf gplay-cli-*.tar.gz
+sudo mv gplay-cli /usr/local/bin/
+```
+
+---
+
+### 2. Via Cargo (Rust Package Manager)
 
 ```bash
 cargo install gplay-cli
 ```
 
-### From Source
+---
+
+### 3. From Source
 
 Ensure you have [Rust & Cargo](https://rustup.rs/) installed:
 
